@@ -4,11 +4,10 @@ package blockchain
 //@ https://pkg.go.dev/github.com/dgraph-io/badger
 import (
 	"fmt"
-
 	"github.com/dgraph-io/badger" 
 ) //@ go get github.com/dgraph-io/badger
 const (
-	dbPath = "./tmp/blocks"
+	dbPath = "./database/blocks" 
 )
 
 
@@ -76,6 +75,7 @@ func (originalChain *BlockChain) AddBlock(data string) {
 
 
 
+
 //@ for inverse traversal
 type ChainIterator struct {
 	CurrentHash []byte
@@ -96,7 +96,7 @@ func (iterator *ChainIterator) Back() *Block {
         return nil
 	})
 	popBlock = DeSerialize(rawData)
-	
+
     iterator.CurrentHash = popBlock.PreviousHash
     return popBlock
 }
