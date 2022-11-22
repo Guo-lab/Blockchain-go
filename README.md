@@ -37,4 +37,10 @@ Output:
 ## Part 2
 > import: use the absolute path considering GOPATH
 1. #### Refactoring
-2. #### Proof of Work
+2. #### [Proof of Work](https://crypto-academy.org/what-is-proof-of-work/)   
+   Simply speaking, find right sha256 corresponding to the combination of data and nonce 
+
+
+<br><br>
+## Part 2
+1. #### Add a key value storage database BadgerDB (accepting only bytes or slices of bytes)
