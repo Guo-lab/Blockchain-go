@@ -90,3 +90,25 @@ Output:
    badger 2022/11/23 02:16:59 INFO: Compaction for level: 0 DONE
    badger 2022/11/23 02:16:59 INFO: Force compaction on level 0 done
    ```
+
+
+<br><br>
+## Part 4  
+- ### Transaction
+
+
+<br><br><br><br><br><br>
+# Part 5 (give up this part temporarily)
+- ### (1) Design Function.1 Entire Transaction System-- <font color="yellow">Wallet (Wallets),  Digital Signatures (Scripts)</font> 
+- ### (2) Design Optimization -- <font color="yellow">Unspent Transaction Output Set</font> 
+- ### (3) Design [Merkle Tree](https://github.com/cbergoon/merkletree) (like the UTOS) for Transaction (Leaf Hash Combination for Validation) [Reference](https://zhuanlan.zhihu.com/p/39271872)
+   $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">--------------------- Merkle Root ---------------------</font>   
+   $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|</font>   
+   $~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">---- Sha256 Branch A + B ----$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$---- Sha256 Branch C + D ----</font>   
+   $~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|</font>   
+   $~~~~~~~~~$<font color="green">Branch A: sha256 tx1 $~~~~~~~$Branch B: sha256 tx2 $~~~~~~~~$Branch C: sha256 tx3 $~~~~~~~~~~~~~~~$Branch D: sha256 tx4</font>   
+   $~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|</font>   
+   $~~~~~~~~~~~~~~~~~~~~~~~~~$<font color="green">|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$|</font>   
+   $~~~~~~~~~~~~~~~$<font color="green">Transaction One$~~~~~~~~~~~~~~~$Transaction Two$~~~~~~~~~~~~~~~$Transaction Three$~~~~~~~~~~~~~~~~~~~~~~$Transaction Four</font>  
+
+- ### (4) Design Function.2 Network System-- <font color="yellow">Miners, SPV nodes and Full node</font> 

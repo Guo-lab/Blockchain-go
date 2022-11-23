@@ -16,6 +16,8 @@ import (
 
 
 
+
+
 // func main () {
 //  GlobalChain := blockchain.InitChain()
 // 	GlobalChain.AddBlock("First Block after Genesis")
@@ -38,6 +40,7 @@ import (
 // 		fmt.Printf("***\n\n",)	
 // 	}
 // }
+
 
 
 
